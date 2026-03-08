@@ -1,12 +1,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+#Naming and all
+
 bot: str = "Hamm"
 print (f'{bot}: Hey there, Wanna find area of shapes??')
 
 while True:
     user: str = input("Greatness: ").lower()
-
+    
+#Starting and Breaking
+    
     if user == 'quit':
         break
     elif user == 'yeah':
@@ -14,12 +18,16 @@ while True:
         
         try:
             option = input("option: ").lower()
-
+            
+#Area for Circle
+            
             if option == 'a':
                 radius = float(input("Enter the radius of the circle: "))
                 area = np.pi * radius**2
                 print(f"The area of the circle is {area}\nwana see the circle??")
-
+                
+#Plotting the Circle
+                
                 if input("see??: ").lower() == 'yeah':
 
                     plt.plot(radius * np.cos(np.linspace(0, 2 * np.pi, 100)), radius * np.sin(np.linspace(0, 2 * np.pi, 100)))
@@ -29,12 +37,16 @@ while True:
                     plt.show()
                 else:
                         print("Okay, maybe next time!")
-
+                    
+#Area for Square
+            
             elif option == 'b':
                 side = float(input("Enter the side length of the square: "))
                 area = side**2
                 print(f"The area of the square is {area}\nwana see the square??")
-
+                
+#Plotting the Square
+                
                 if input("see??: ").lower() == 'yeah':
 
                     plt.plot([0, side, side, 0, 0], [0, 0, side, side, 0])
@@ -44,13 +56,17 @@ while True:
                     plt.show()
                 else:
                     print("Okay, maybe next time!")
-
+                    
+#Area for Triangle
+            
             elif option == 'c':
                 base = float(input("Enter the base of the triangle: "))
                 height = float(input("Enter the height of the triangle: "))
                 area = 0.5 * base * height
                 print(f"The area of the triangle is {area}\nwana see the triangle??")
-
+                
+#Plotting the Triangle
+                
                 if input("see??: ").lower() == 'yeah':
 
                     plt.plot([0, base, 0], [0, 0, height])
