@@ -7,17 +7,15 @@ while True:
     if user == 'quit':
         print(f'{bot}: byeee')
         break
-    elif user in ['sup','hello','bitch','mylord']:
+    elif user in ['sup','hello','mylord']:
         print(f'{bot}:what??')
-    elif user in ['see you bich','fck you','landos the best']:
-        print(f'{bot}:bitch, ima fck your mom ')
     elif user in ['wanna do basic maths']:
-        print(f'{bot}: U cant even do dat')
+        print(f'{bot}: Sure why not?!!')
 
         try:
             num1: float = (float(input('gimme the 1st: ')))
             num2: float = (float(input('gimme the 2nd: ')))
-            print(f'{bot}: bichh what i do with {num1} nd {num2}??')
+            print(f'{bot}: What do you want to do with {num1} and {num2}??')
 
             opp = input('opp: ').lower()
 
@@ -31,6 +29,6 @@ while True:
                 print(f'dats: {num1/num2}')
 
         except ValueError:
-            print(f'{bot}: nigga these aint numbers')
+            print(f'{bot}: These aint numbers')
     else:
-        print(f'{bot}: Engliiss U lance stroll-head')
+        print(f'{bot}: English Mister!!')
